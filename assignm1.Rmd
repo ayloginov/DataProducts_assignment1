@@ -1,0 +1,27 @@
+---
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## My MAP
+
+`r as.character(format(Sys.Date(), format="%B %d, %Y"))`
+
+Click on zoom button
+```{r, warning=FALSE}
+library(leaflet)
+
+my_map <- leaflet() %>%
+    addTiles(options = providerTileOptions(minZoom = 16, maxZoom = 19)) %>%
+    addMarkers(lat=55.773496, lng=37.586678, 
+               popup = "My favourite burger place")
+my_map
+```
+
+
