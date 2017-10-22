@@ -18,7 +18,7 @@ Click on zoom button
 library(leaflet)
 
 my_map <- leaflet() %>%
-    addTiles(options = providerTileOptions(minZoom = 16, maxZoom = 19)) %>%
+    addTiles() %>%
     addMarkers(lat=55.773496, lng=37.586678, 
                popup = "My favourite burger place")
 my_map
